@@ -3,13 +3,12 @@
 #include <stdio.h>
 
 int main() {
-    int teorica, pratica;
-    float resultado;
+    float teorica, pratica, resultado;
 
     printf("Digite a nota da prova pratica: \n");
-    scanf("%i", &pratica);
+    scanf("%f", &pratica);
     printf("Digite a nota da prova teoria: \n");
-    scanf("%i", &teorica);
+    scanf("%f", &teorica);
 
     resultado = ((teorica * 0.6) + (pratica * 0.4));
 
