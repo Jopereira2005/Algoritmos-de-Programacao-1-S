@@ -57,16 +57,16 @@ int main() {
             sprintf(nome, "Joao");
         }
     }
-    percentual = vencedor*(100/(opc_1 + opc_2 + opc_3 + opc_4 + opc_5)); 
+    percentual = (vencedor*100)/((opc_1 + opc_2 + opc_3 + opc_4 + opc_5)); 
 
 
     printf("O resultado final da votacao foi:\n");
     printf("+---+----------+---------+\n");
-    printf("| 1 | Jose     | %8i |\n", opc_1);
-    printf("| 2 | Maria    | %8i |\n", opc_2);
-    printf("| 3 | Joao     | %8i |\n", opc_3);
-    printf("| 4 | Branco   | %8i |\n", opc_4);
-    printf("| 5 | Nulo     | %8i |\n", opc_5);
+    printf("| 1 | Jose     | %7i |\n", opc_1);
+    printf("| 2 | Maria    | %7i |\n", opc_2);
+    printf("| 3 | Joao     | %7i |\n", opc_3);
+    printf("| 4 | Branco   | %7i |\n", opc_4);
+    printf("| 5 | Nulo     | %7i |\n", opc_5);
     printf("+---+----------+---------+\n\n");
 
     printf("+----------------------------------+\n");
@@ -75,7 +75,4 @@ int main() {
     printf("| %10s | %19i |\n", nome, vencedor);
     printf("+------------+---------------------+\n");
     printf("O percentual de voto do vencedor foi: %.2f%%\n", percentual);
-
-
-
 }
