@@ -4,10 +4,12 @@
 // c) o percentual de eleitores que elegeram o candidato vencedor. 
 
 #include <stdio.h>
-#include <stdlib.h>
 
 int main() {
-    int voto, opc_1, opc_2, opc_3, opc_4, opc_5, vencedor, percentual, qtdd;
+    int voto, opc_1, opc_2, opc_3, opc_4, opc_5, vencedor;
+    float percentual;
+    opc_1 = opc_2 = opc_3 = opc_4 = opc_5 = 0;
+    char nome[5];
 
     while(voto != 0) {
         printf("+---+----------+\n");
@@ -20,7 +22,7 @@ int main() {
         printf("+---+----------+\n\n");
 
         printf("Escolha uma das opcoes acima para a votacao: ");
-        scanf("%i", voto);
+        scanf("%i", &voto);
 
         if(voto != 0) {
             switch (voto) {
@@ -37,13 +39,43 @@ int main() {
                     opc_4++;
                     break;
                 case 5:
-                    opc_4++;
+                    opc_5++;
                     break;
                 default:
                     printf("\nOpcao invalida: \n\n");
                     break;
             }
         }
+        vencedor = opc_1;
+        sprintf(nome, "Jose");
+
+        if(opc_2 > vencedor) {
+            vencedor = opc_2;
+            sprintf(nome, "Maria");
+        } else if(opc_3 > vencedor) {
+            vencedor = opc_3;
+            sprintf(nome, "Joao");
+        }
     }
-    percentual = 100/(opc_1 + opc_2 + opc_3 + opc_4 + opc_5);   
+    percentual = vencedor*(100/(opc_1 + opc_2 + opc_3 + opc_4 + opc_5)); 
+
+
+    printf("O resultado final da votacao foi:\n");
+    printf("+---+----------+---------+\n");
+    printf("| 1 | Jose     | %8i |\n", opc_1);
+    printf("| 2 | Maria    | %8i |\n", opc_2);
+    printf("| 3 | Joao     | %8i |\n", opc_3);
+    printf("| 4 | Branco   | %8i |\n", opc_4);
+    printf("| 5 | Nulo     | %8i |\n", opc_5);
+    printf("+---+----------+---------+\n\n");
+
+    printf("+----------------------------------+\n");
+    printf("| O resultado final da votacao foi |\n");
+    printf("+------------+---------------------+\n");
+    printf("| %10s | %19i |\n", nome, vencedor);
+    printf("+------------+---------------------+\n");
+    printf("O percentual de voto do vencedor foi: %.2f%%\n", percentual);
+
+
+
 }
