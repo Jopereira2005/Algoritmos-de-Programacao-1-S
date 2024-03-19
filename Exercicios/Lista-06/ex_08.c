@@ -6,12 +6,11 @@
 #include <stdio.h>
 
 int main() {
-    int voto, opc_1, opc_2, opc_3, opc_4, opc_5, vencedor;
+    int voto, opc_1 = 0, opc_2 = 0, opc_3 = 0, opc_4 = 0, opc_5 = 0, vencedor;
     float percentual;
-    opc_1 = opc_2 = opc_3 = opc_4 = opc_5 = 0;
     char nome[5];
 
-    while(voto != 0) {
+    do {
         printf("+---+----------+\n");
         printf("| 1 | Jose     |\n");
         printf("| 2 | Maria    |\n");
@@ -46,9 +45,9 @@ int main() {
                     break;
             }
         }
+        
         vencedor = opc_1;
         sprintf(nome, "Jose");
-
         if(opc_2 > vencedor) {
             vencedor = opc_2;
             sprintf(nome, "Maria");
@@ -56,9 +55,9 @@ int main() {
             vencedor = opc_3;
             sprintf(nome, "Joao");
         }
-    }
-    percentual = (vencedor*100)/((opc_1 + opc_2 + opc_3 + opc_4 + opc_5)); 
+    } while (voto != 0);
 
+    percentual = (vencedor*100)/((opc_1 + opc_2 + opc_3 + opc_4 + opc_5)); 
 
     printf("O resultado final da votacao foi:\n");
     printf("+---+----------+---------+\n");
