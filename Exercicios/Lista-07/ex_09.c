@@ -2,7 +2,6 @@
 
 #include <stdio.h>
 
-
 int verificacao(int num, int array[]) {
     int qtdd = 0;
     for(int i = 0; i < 10; i++) {
