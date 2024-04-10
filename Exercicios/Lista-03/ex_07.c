@@ -17,7 +17,7 @@ int main() {
     printf("Lado 3: \n");
     scanf("%i", &lado_3);
 
-    if(lado_1 == lado_2) {
+    if(lado_1 == lado_2 || lado_1 == lado_3 || lado_2 == lado_3) {
         if(lado_2 == lado_3 && lado_1 == lado_3) {
             printf("O triangulo é equilatero.");
         } else {
