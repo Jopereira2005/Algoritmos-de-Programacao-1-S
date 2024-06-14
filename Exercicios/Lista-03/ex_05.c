@@ -15,7 +15,7 @@ int main() {
     maior = num_1;
     if (num_2 > maior) {
         maior = num_2;
-    } else if (num_3 > maior) {
+    } if (num_3 > maior) {
         maior = num_3;
     }
 
