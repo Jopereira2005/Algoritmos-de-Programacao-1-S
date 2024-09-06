@@ -2,10 +2,10 @@
 
   Repositório dedicado às aulas de Algoritmo de Programação do 1º semestre da faculdade de Engenharia da Computação | FACENS
 
-# Professor
+## Professor
 
   Rafael Rodrigues Da Paz
 
-# Tecnologias
+## Tecnologias
 
   - Linguagem C
